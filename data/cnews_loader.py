@@ -83,8 +83,7 @@ def read_vocab(vocab_dir):
 
 def read_category():
     """读取分类目录，固定"""
-    categories = pickle.load(open('/workspace/models/tagging/data/categories.txt','rb'))
-
+    categories = ['产业', '理论', '论文', '深度学习', '机器学习', '计算机视觉', '人工智能', 'NLP', '工程', '谷歌']
     categories = [native_content(x) for x in categories]
 
     cat_to_id = dict(zip(categories, range(len(categories))))
